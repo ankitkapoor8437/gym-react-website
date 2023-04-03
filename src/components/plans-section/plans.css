@@ -33,12 +33,12 @@
 
 }
 
-.plan:nth-child(2) svg{
+.plan:nth-child(2) svg {
     fill: white;
 
 }
 
-.plan:nth-child(2) button{
+.plan:nth-child(2) button {
     color: orange;
 
 }
@@ -70,11 +70,27 @@
     gap: 1rem;
 }
 
-.feature{
+.feature {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.feature img{
+
+.feature img {
     width: 1rem;
+}
+
+.planblur1 {
+    width: 32rem;
+    height: 23rem;
+    top: 6rem;
+    left: 0rem;
+}
+
+
+.planblur2{
+    width: 32rem;
+    height: 23rem;
+    top: 10rem;
+    right: 0rem;
 }

@@ -5,15 +5,22 @@ import heroImage from '../../assets/hero_image.png'
 import heroImageBack from '../../assets/hero_image_back.png'
 import Heart from '../../assets/heart.png'
 import Calories from '../../assets/calories.png'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
+  const transition = { type: 'spring', duration: 3 }
   return (
     <div className='hero'>
+      <div className="blur heroblur"></div>
       <div className="leftHero">
         <Header />
 
         <div className="best-add">
-          <div></div>
+          <motion.div
+          initial={{left:'238px'}}
+          whileInView={{left:'8px'}}
+          transition={{...transition, type:'tween'}}
+          ></motion.div>
           <span>The best fitness club in the town.</span>
         </div>
 
@@ -69,23 +76,35 @@ const Hero = () => {
       <div className="rightHero">
         <button className="btn">Join Now</button>
 
-        <div className="heart-rate">
+        <motion.div
+        initial={{right:'-4rem'}}
+        whileInView={{right:'4rem'}}
+        transition={transition}         
+         className="heart-rate">
           <img src={Heart} alt="heartImage" />
           <span>Heart Rate </span>
           <span>116 BPM</span>
-        </div>
+        </motion.div>
 
         {/* image sectoin */}
         <img src={heroImage} className="heroImage" />
-        <img src={heroImageBack} className="heroImageBack" />
+        <motion.img
+        initial={{right:'11rem'}}
+        whileInView={{right:'20rem'}}
+        transition={transition}  
+        src={heroImageBack} className="heroImageBack" />
 
         {/* calories */}
-        <div className="calories">
-          <img src={Calories}  />
+        <motion.div
+        initial={{right:'32rem'}}
+        whileInView={{right:'28rem'}}
+        transition={transition}  
+        className="calories">
+          <img src={Calories} />
           <div>
             <span>Calories Burned</span><span>220 kcal</span>
           </div>
-        </div>
+        </motion.div>
 
       </div>
 
