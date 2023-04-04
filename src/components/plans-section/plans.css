@@ -94,3 +94,13 @@
     top: 10rem;
     right: 0rem;
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+    .plans{
+        flex-direction: column;
+    }
+    
+}
