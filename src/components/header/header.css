@@ -26,6 +26,17 @@
     color: var(--orange);
 }
 
+.links {
+    color: white;
+}
+
+
+.links:hover {
+    color: white;
+    color: var(--orange);
+    transform: scale(1.1);
+
+}
 
 @media screen and (max-width:768px) {
     .header>:nth-child(2) {
@@ -39,4 +50,9 @@
         background-color: var(--appColor);
         padding: 2rem;
     }
+
+    .links {
+        color: white;
+    }
+
 }
